@@ -15,105 +15,58 @@
         }
         
         body {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            height: 100vh;
-            overflow: hidden;
         }
         
         .profile-container {
             width: 100%;
-            max-width: 1000px;
-            height: 460px;
+            max-width: 800px;
+
             background: white;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        @media (min-width: 992px) {
-            .profile-container {
-                flex-direction: row;
-            }
-        }
-        
-        .profile-left {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            flex: 1;
+            padding: 40px;
             position: relative;
-            overflow: hidden;
         }
         
-        .profile-left::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .profile-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.2);
-            overflow: hidden;
-            margin-bottom: 20px;
-            background: #2c3e50;
+        .header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
+            margin-bottom: 30px;
         }
         
-        .profile-image i {
-            font-size: 50px;
-            color: rgba(255, 255, 255, 0.9);
+        .name-title {
+            flex: 2;
         }
         
-        .profile-left h1 {
-            font-size: 24px;
-            margin-bottom: 8px;
+        .name-title h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 5px;
             font-weight: 700;
-            position: relative;
-            z-index: 1;
         }
         
-        .profile-left h2 {
-            font-size: 16px;
+        .name-title h2 {
+            font-size: 18px;
+            color: #3498db;
             font-weight: 500;
-            margin-bottom: 15px;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
         }
         
         .platforms {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
         }
         
         .platform {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: white;
             display: flex;
@@ -122,6 +75,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
+            border: 1px solid #e9ecef;
         }
         
         .platform:hover {
@@ -130,7 +84,7 @@
         }
         
         .platform i {
-            font-size: 22px;
+            font-size: 24px;
         }
         
         .upwork {
@@ -141,26 +95,16 @@
             color: #1dbf73;
         }
         
-        .profile-right {
-            padding: 30px;
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow-y: auto;
-        }
-        
-        .profile-right h3 {
-            font-size: 22px;
+        .profile-content h3 {
+            font-size: 24px;
             color: #2c3e50;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
             font-weight: 600;
         }
         
-        .profile-right h3:after {
+        .profile-content h3:after {
             content: '';
             position: absolute;
             left: 0;
@@ -171,25 +115,25 @@
             border-radius: 3px;
         }
         
-        .profile-right p {
+        .profile-content p {
             line-height: 1.6;
             color: #555;
-            margin-bottom: 15px;
-            font-size: 14px;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
         
         .expertise {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0;
+            gap: 12px;
+            margin: 20px 0;
         }
         
         .expertise span {
             background: #f8f9fa;
-            padding: 6px 15px;
+            padding: 8px 18px;
             border-radius: 30px;
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 500;
             color: #3498db;
             border: 1px solid #e9ecef;
@@ -199,7 +143,7 @@
             background: #f8f9fa;
             padding: 20px;
             border-radius: 10px;
-            margin-top: 15px;
+            margin-top: 25px;
             display: flex;
             align-items: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
@@ -207,24 +151,24 @@
         }
         
         .stats-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: #3498db;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            margin-right: 20px;
             flex-shrink: 0;
         }
         
         .stats-icon i {
             color: white;
-            font-size: 18px;
+            font-size: 20px;
         }
         
         .stats-content h4 {
-            font-size: 16px;
+            font-size: 18px;
             color: #2c3e50;
             margin-bottom: 5px;
             font-weight: 600;
@@ -234,13 +178,18 @@
             color: #3498db;
             font-weight: 600;
             margin: 0;
-            font-size: 14px;
+            font-size: 16px;
+        }
+        
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
         }
         
         .contact-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
+            padding: 14px 30px;
             background: #3498db;
             color: white;
             text-decoration: none;
@@ -251,8 +200,7 @@
             text-align: center;
             border: none;
             cursor: pointer;
-            font-size: 14px;
-            width: 180px;
+            font-size: 16px;
         }
         
         .contact-btn:hover {
@@ -263,13 +211,12 @@
         
         .social-links {
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 15px;
         }
         
         .social-links a {
-            width: 35px;
-            height: 35px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #f8f9fa;
             display: flex;
@@ -288,21 +235,41 @@
         }
         
         .watermark {
-            font-size: 11px;
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-size: 12px;
             color: #ccc;
-            text-align: right;
-            margin-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                padding: 30px;
+                height: auto;
+                min-height: 460px;
+            }
+            
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
 <body>
     <div class="profile-container">
-        <div class="profile-left">
-            <div class="profile-image">
-                <i class="fas fa-user"></i>
+        <div class="header">
+            <div class="name-title">
+                <h1>Ashik Hosen</h1>
+                <h2>WordPress & IMS Designer and Developer</h2>
             </div>
-            <h1>Ashik Hosen</h1>
-            <h2>WordPress & IMS Designer and Developer</h2>
             
             <div class="platforms">
                 <div class="platform">
@@ -314,43 +281,42 @@
             </div>
         </div>
         
-        <div class="profile-right">
-            <div>
-                <h3>Professional Profile</h3>
-                <p>I am a WordPress and IMS designer and developer with extensive expertise in creating professional, functional, and visually appealing websites. With a strong focus on quality and client satisfaction, I deliver solutions that meet modern web standards and business requirements.</p>
-                
-                <div class="expertise">
-                    <span>WordPress Development</span>
-                    <span>IMS Design</span>
-                    <span>E-Commerce</span>
-                    <span>Responsive Design</span>
-                    <span>Custom Themes</span>
-                </div>
-                
-                <div class="stats">
-                    <div class="stats-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="stats-content">
-                        <h4>World Class Website Developer</h4>
-                        <p>Completed 250+ Projects Successfully</p>
-                    </div>
-                </div>
+        <div class="profile-content">
+            <h3>Professional Profile</h3>
+            <p>I am a WordPress and IMS designer and developer with extensive expertise in creating professional, functional, and visually appealing websites. With a strong focus on quality and client satisfaction, I deliver solutions that meet modern web standards and business requirements.</p>
+            
+            <div class="expertise">
+                <span>WordPress Development</span>
+                <span>IMS Design</span>
+                <span>E-Commerce Solutions</span>
+                <span>Responsive Design</span>
+                <span>Custom Themes</span>
+                <span>Plugin Development</span>
             </div>
             
-            <div>
-                <button class="contact-btn">Contact Me</button>
-                
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+            <div class="stats">
+                <div class="stats-icon">
+                    <i class="fas fa-trophy"></i>
                 </div>
-                
-                <div class="watermark">© 2023 Ashik Hosen. All Rights Reserved.</div>
+                <div class="stats-content">
+                    <h4>World Class Website Developer</h4>
+                    <p>Completed 250+ Projects Successfully</p>
+                </div>
             </div>
         </div>
+        
+        <div class="footer">
+            <button class="contact-btn">Contact Me</button>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+        
+        <div class="watermark">© 2023 Ashik Hosen. All Rights Reserved.</div>
     </div>
 
     <script>
